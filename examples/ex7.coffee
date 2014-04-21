@@ -1,4 +1,4 @@
-# Calculates easter 
+# Calculates Easter 
 
 gregorianEaster = (year = (new Date).getFullYear()) ->
   a = year % 19
@@ -20,6 +20,12 @@ gregorianEaster = (year = (new Date).getFullYear()) ->
 
 # console.log gregorianEaster(2014).join '/'
 
+# Number of 4/20 Easters
+
+console.log (year for year in [2014..2100]).map(gregorianEaster).filter((easter) -> easter.join('/') is '4/20').length
+
+# Years of 4/20 Easters
+
 dates = {}
 dates[year] = gregorianEaster year for year in [2014..2100]
 
@@ -35,4 +41,4 @@ fourTwentyDates = dateArray.filter((easter) -> easter[1].join('/') is '4/20')
 fourTwentyYears = []
 fourTwentyYears[i] = date[0] for date, i in fourTwentyDates
 
-console.log fourTwentyYears
+# console.log fourTwentyYears
