@@ -1,7 +1,7 @@
 # Functions
 
-greet = (name) ->
-  name ?= 'mystery man'
+greet = (name = 'mystery man') ->
+  # name ?= 'mystery man'
   console.log 'hello ' + name
 
 greet 'dudes'

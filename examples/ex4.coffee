@@ -6,7 +6,7 @@ math =
   square: square
   cube: (x) -> x * square x
 
-numbers = [0..100].filter (x) -> (x % 3 == 0)
+numbers = [100..0].filter (x) -> (x % 3 == 0)
 
 # console.log numbers
 
