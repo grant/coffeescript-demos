@@ -12,4 +12,4 @@ console.log tip[-3..-1]
 
 numPets = 100
 
-console.log 'You have #{numPets} pets!'
+console.log "You have #{numPets} pets!"
